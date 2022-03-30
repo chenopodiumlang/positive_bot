@@ -65,7 +65,7 @@ LIMIT 1'''
             my_image = Image.open("image.jpg")
 
 
-            title_font = ImageFont.load_default()
+            title_font = ImageFont.truetype('arial.ttf', 200)
 
             image_editable = ImageDraw.Draw(my_image)
             image_editable.text((2000, 15), s2,
