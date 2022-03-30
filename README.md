@@ -11,3 +11,5 @@ positive_bot - это бот, который пытается помочь ва�
 Чтобы начать заново, снова введите /start.
 
 Картинка: https://unsplash.com/photos/9IcKPSQ9G5Q?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+
+pythonanywhere: http://chenopodium.pythonanywhere.com/
