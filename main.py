@@ -5,10 +5,12 @@ import datetime
 import conf
 import sqlite3
 from wordcloud import WordCloud
+import nltk
 from nltk.corpus import stopwords
 import string
 from PIL import Image, ImageFont, ImageDraw
 m = Mystem()
+nltk.download("stopwords")
 
 con = sqlite3.connect(
     'positive_bot.db', check_same_thread=False)
@@ -45,7 +47,7 @@ def callback_inline(call):
             record_message(call.message)
         if call.data == "random_memory":
             random_message_query = '''SELECT message FROM messages WHERE tg_id = ?
-ORDER BY RANDOM()  
+ORDER BY RANDOM()
 LIMIT 1'''
             cur.execute(random_message_query, (str(call.message.chat.id),))
             random_message = cur.fetchall()
